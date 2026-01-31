@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Expense Tracker</h1>
+
+    <form id="expense-form">
+        <input type="text" id="title" placeholder="Expense Title" required>
+        <input type="number" id="amount" placeholder="Amount" required>
+        
+        <select id="category" required>
+            <option value="">Select Category</option>
+            <option value="Food">Food</option>
+            <option value="Transport">Transport</option>
+            <option value="Education">Education</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Others">Others</option>
+        </select>
+
+        <input type="date" id="date" required>
+        <button type="submit">Add Expense</button>
+    </form>
+
+    <h2>Total Expense: ৳ <span id="total">0</span></h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="expense-list"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
